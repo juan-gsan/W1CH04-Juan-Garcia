@@ -27,6 +27,7 @@ body {
 }
 
 .button-container {
+  justify-content: flex-end;
   margin-bottom: 40px;
 }
 
@@ -36,7 +37,12 @@ body {
   color: white;
   font-size: 0.8rem;
   border-radius: 0 10px 10px 10px;
-  border: 0;
+  border: 2px solid rgb(237, 100, 54);
+}
+
+.button-container__button:hover {
+  background-color: white;
+  color: rgb(237, 100, 54);
 }
 
 .main-container__images {
@@ -52,17 +58,71 @@ body {
 }
 
 .main-container__images img {
-  padding: 0 20px;
-  border-radius: 30px;
+  margin: 0 10px;
+  border-radius: 10%;
   max-width: 400px;
   max-height: 400px;
   object-fit: cover;
+  z-index: 1;
+}
+
+.main-container__images img:hover {
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.main-container__image::after .first-image:hover {
+  content: "<p>ACTIVITIES</p>";
+  color: black;
+  font-size: 1.2rem;
+  text-align: center;
+  z-index: 3;
 }
 
 @media (min-width: 500px) {
   .title,
   .button-container {
     display: flex;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .title__text {
+    margin-left: 20px;
+  }
+  .title__text--colored {
+    color: rgb(237, 100, 54);
+    font-size: 1.5rem;
+  }
+  .title__text--bold {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .button-container {
+    margin-bottom: 40px;
+    margin-right: 20px;
+    max-height: 60px;
+    min-width: 156.13px;
+    align-self: flex-end;
+  }
+  .button-container__button {
+    padding: 20px 40px;
+    background-color: rgb(237, 100, 54);
+    color: white;
+    font-size: 1rem;
+    border-radius: 0 20px 20px 20px;
+    border: 2px solid rgb(237, 100, 54);
+  }
+  .button-container__button:hover {
+    background-color: white;
+    color: rgb(237, 100, 54);
   }
 }
 
