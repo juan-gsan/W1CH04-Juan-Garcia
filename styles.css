@@ -27,6 +27,7 @@ body {
 }
 
 .button-container {
+  justify-content: flex-end;
   margin-bottom: 40px;
 }
 
@@ -63,6 +64,25 @@ body {
   .title,
   .button-container {
     display: flex;
+  }
+  .title__text--colored {
+    color: rgb(237, 100, 54);
+    font-size: 1.5rem;
+  }
+  .title__text--bold {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .button-container {
+    margin-bottom: 40px;
+  }
+  .button-container__button {
+    padding: 20px 40px;
+    background-color: rgb(237, 100, 54);
+    color: white;
+    font-size: 1rem;
+    border-radius: 0 20px 20px 20px;
+    border: 0;
   }
 }
 
